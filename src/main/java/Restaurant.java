@@ -9,8 +9,43 @@ public class Restaurant {
     public LocalTime openingTime;
     public LocalTime closingTime;
     private List<Item> menu = new ArrayList<Item>();
+    public Restaurant() {
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public LocalTime getOpeningTime() {
+        return openingTime;
+    }
+
+    public void setOpeningTime(LocalTime openingTime) {
+        this.openingTime = openingTime;
+    }
+
+    public LocalTime getClosingTime() {
+        return closingTime;
+    }
+
+    public void setClosingTime(LocalTime closingTime) {
+        this.closingTime = closingTime;
+    }
+
+    public void setMenu(List<Item> menu) {
+        this.menu = menu;
+    }
 
     public Restaurant(String name, String location, LocalTime openingTime, LocalTime closingTime) {
+
         this.name = name;
         this.location = location;
         this.openingTime = openingTime;
@@ -24,7 +59,7 @@ public class Restaurant {
         else {
             return false;
         }
-        //DELETE ABOVE STATEMENT AND WRITE CODE HERE
+
     }
 
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
@@ -32,8 +67,7 @@ public class Restaurant {
     public List<Item> getMenu() {
         List<Item> menu = this.menu;
         return menu;
-        //return null;
-        //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
+
     }
 
     private Item findItemByName(String itemName){
